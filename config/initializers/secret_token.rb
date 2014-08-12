@@ -9,4 +9,20 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Grxclan::Application.config.secret_key_base = 'b16e01fe1a4ba30e42cee4892c95ebc09f5d9875a06f15973f321f0ec8c957fe29637ae36c0d1f93daaad18063632066b3414d544fcfeffbe7b72721d84399d3'
+
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+  	# Use the existing token.
+  	File.read(token_file).chomp
+  else
+  	# Generate a new token and store it in token_file
+  	token = SecureRandom.hex(64)
+  	File.write(token_file, token)
+  	token
+  end
+end
+
+Grxclan::Application.config.secret_key_base = secure_token
