@@ -1,0 +1,21 @@
+@import "bootstrap";
+
+/* Nav Bar Links */
+
+.navlinks {
+	li {
+	border-right: 1px solid #EEEEEE;
+	font-size: 16px;
+	padding: 0px 15px;
+	}
+
+	li:last-child {
+		border-right: none;
+	}
+}	
+
+/* Hero Unit */
+
+.banner {
+	margin-top: 90px;
+}
