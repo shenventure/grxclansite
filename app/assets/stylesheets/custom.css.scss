@@ -1,5 +1,11 @@
 @import "bootstrap";
 
+/* Header */
+
+.header {
+	margin-bottom: 100px;
+}
+
 /* Nav Bar Links */
 
 .navlinks {
@@ -14,8 +20,10 @@
 	}
 }	
 
-/* Hero Unit */
+/* Roster Profiles */
 
-.banner {
-	margin-top: 90px;
+.roster-list li {
+	float: left;
+	list-style: none;
+	margin-right: 50px;
 }
