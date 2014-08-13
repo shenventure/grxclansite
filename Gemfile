@@ -4,6 +4,8 @@ ruby '1.9.3'
 gem "twitter-bootstrap-rails"
 gem 'bootstrap_form'
 gem 'devise'
+gem "table_print"
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.5'
