@@ -1,15 +1,12 @@
-class StaticPagesController < ApplicationController
-  def home
-  end
+class TopicsController < ApplicationController
 
-  def about
-  end
+def index
+  @topics = Topic.all
+end
 
-  def roster
-  end
+def show 
 
-  def video
-  end
+end
 
 private
 
@@ -18,6 +15,5 @@ private
     @topic.votes.create
     redirect_to(topics_path)
   end
-
 
 end

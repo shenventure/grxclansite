@@ -1,9 +1,10 @@
 @import "bootstrap";
 
+
 /* Header */
 
 .header {
-	margin-bottom: 100px;
+	margin-bottom: 90px;
 }
 
 /* Nav Bar Links */
@@ -26,4 +27,12 @@
 	float: left;
 	list-style: none;
 	margin-right: 50px;
+}
+
+/* Voting */
+
+.vote li {
+	float: left;
+	list-style: none;
+	margin-right: 100px;
 }

@@ -2,6 +2,12 @@ Grxclan::Application.routes.draw do
   root 'static_pages#home'
   get "static_pages/about"
 
+  resources :topics do
+    member do
+      post 'upvote'
+    end
+  end
+
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/roster', to: 'static_pages#roster',   via: 'get'
   match '/video', to: 'static_pages#video',   via: 'get'
