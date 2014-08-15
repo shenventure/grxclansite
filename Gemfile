@@ -2,10 +2,10 @@ source 'https://rubygems.org'
 ruby '1.9.3'
 
 gem "twitter-bootstrap-rails"
+
 gem 'bootstrap_form'
 gem 'devise'
 gem "table_print"
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.5'
@@ -48,6 +48,10 @@ group :production do
 end
 
 gem 'nokogiri', '~> 1.6.2.1'
+
+gem "youtube_it"
+gem 'inherited_resources'
+gem 'acts_as_commentable'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
