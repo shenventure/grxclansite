@@ -1,10 +1,9 @@
 Grxclan::Application.routes.draw do
-<<<<<<< HEAD
   devise_for :users
-=======
+
   get "videos/index"
   get "videos/show"
->>>>>>> video
+
   root 'static_pages#home'
   get "static_pages/about"
 
