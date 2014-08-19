@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140813232548) do
+ActiveRecord::Schema.define(version: 20140819230211) do
+
+  create_table "profiles", force: true do |t|
+    t.string   "name"
+    t.string   "role"
+    t.string   "occupation"
+    t.string   "fave_game"
+    t.text     "game_addiction"
+    t.string   "fave_character"
+    t.string   "first_fps"
+    t.string   "fave_movie"
+    t.text     "hobbies"
+    t.text     "fact"
+    t.string   "twitter"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
 
   create_table "topics", force: true do |t|
     t.string   "title"
@@ -34,6 +53,17 @@ ActiveRecord::Schema.define(version: 20140813232548) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "gamertag"
+    t.string   "name"
+    t.string   "role"
+    t.string   "occupation"
+    t.string   "fave_game"
+    t.string   "game_addiction"
+    t.string   "fave_character"
+    t.string   "first_fps"
+    t.string   "fave_movie"
+    t.text     "hobbies"
+    t.text     "fact"
+    t.string   "twitter"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

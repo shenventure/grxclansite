@@ -1,0 +1,46 @@
+<div class="row">
+  <h1>Gamer Profile</h1></br>
+  <div class="span6 offset3"> 
+    <%= form_for @user, url: {action: "create"}, :method => :POST do |profile| %>
+      <%= profile.label :Gamertag %>
+      <%= profile.text_field :gamertag %>
+
+      <%= profile.label :Real_Name %>
+      <%= profile.text_field :name %>
+
+      <%= profile.label :Clan_Role %>
+      <%= profile.text_field :role %>
+
+      <%= profile.label :Real_Life_occupation %>
+      <%= profile.text_field :occupation %>   
+
+        <%= profile_form.label :Favorite_game %>
+        <%= profile_form.text_field :fave_game%>  
+
+        <%= profile_form.label :First_game_addiction %>
+        <%= profile_form.text_field :game_addiction %>  
+
+        <%= profile_form.label :Favorite_video_game_character %>
+        <%= profile_form.text_field :fave_character %>  
+
+        <%= profile_form.label :First_FPS_game_played %>
+        <%= profile_form.text_field :first_fps %>   
+
+        <%= profile_form.label :Favorite_movie %>
+        <%= profile_form.text_field :fave_movie %>
+
+        <%= profile_form.label :Hobbies_and_interests%>
+        <%= profile_form.text_field :hobbies %>
+
+        <%= profile_form.label :Something_not_many_people_know_about_me %>
+        <%= profile_form.text_field :fact %>
+
+        <%= profile_form.label :Twitter %>
+        <%= profile_form.text_field :twitter %> </br>   
+
+
+        <%= profile_form.submit "Create my profile", class: "btn btn-large btn-primary" %>
+      <% end %>
+    <% end %>  
+  </div>
+</div>  

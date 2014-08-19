@@ -17,6 +17,8 @@ Grxclan::Application.routes.draw do
   match '/roster', to: 'static_pages#roster',   via: 'get'
   match '/video', to: 'static_pages#video',     via: 'get'
 
+  match 'users/:id', to: 'users#show',          via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

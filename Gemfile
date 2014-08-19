@@ -2,15 +2,14 @@ source 'https://rubygems.org'
 ruby '1.9.3'
 
 gem "twitter-bootstrap-rails"
-<<<<<<< HEAD
+
 gem 'bootstrap_form'
 gem 'devise'
 gem "table_print"
 
-=======
+
 gem "youtube_it"
 gem 'acts_as_commentable'
->>>>>>> video
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.5'
