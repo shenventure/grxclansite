@@ -1,0 +1,44 @@
+<div class="row">
+  <h1>Gamer Profile</h1></br>
+  <div class="span6 offset3"> 
+    <%= form_for @user, url: {action: "update"}, :method => :POST do |profile| %>
+      <%= profile.label :Gamertag %>
+      <%= profile.text_field :gamertag %>
+
+      <%= profile.label :Real_Name %>
+      <%= profile.text_field :name %>
+
+      <%= profile.label :Clan_Role %>
+      <%= profile.text_field :role %>
+
+      <%= profile.label :Real_Life_occupation %>
+      <%= profile.text_field :occupation %>   
+
+      <%= profile.label :Favorite_game %>
+      <%= profile.text_field :fave_game%>  
+
+      <%= profile.label :First_game_addiction %>
+      <%= profile.text_field :game_addiction %>  
+
+      <%= profile.label :Favorite_video_game_character %>
+      <%= profile.text_field :fave_character %>  
+
+      <%= profile.label :First_FPS_game_played %>
+      <%= profile.text_field :first_fps %>   
+
+      <%= profile.label :Favorite_movie %>
+      <%= profile.text_field :fave_movie %>
+
+      <%= profile.label :Hobbies_and_interests%>
+      <%= profile.text_field :hobbies %>
+
+      <%= profile.label :Something_not_many_people_know_about_me %>
+      <%= profile.text_field :fact %>
+
+      <%= profile.label :Twitter %>
+      <%= profile.text_field :twitter %> </br>   
+
+      <%= profile.submit "Update profile", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div> 

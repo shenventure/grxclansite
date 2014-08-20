@@ -1,5 +1,10 @@
 @import "bootstrap";
 
+/* Universal */
+
+li {
+	list-style: none;
+}
 
 /* Header */
 
@@ -13,7 +18,8 @@
 	li {
 	border-right: 1px solid #EEEEEE;
 	font-size: 16px;
-	padding: 0px 15px;
+	margin-top: 10px;
+	padding: 0px 10px;
 	}
 
 	li:last-child {
@@ -28,8 +34,8 @@
 	color: #6DC639;		
 }
 
-#signup a:hover {
-	color: #B4E095;
+#signup:hover {
+	color: white;
 }
 
 /* Roster Profiles */
@@ -38,6 +44,18 @@
 	float: left;
 	list-style: none;
 	margin-right: 50px;
+}
+
+/* Individual Profiles */
+
+.left-profile {
+	float: left;
+	text-align: center;
+}
+
+.profile-facts ul {
+	float: left;
+	font-size: 20px;
 }
 
 /* Voting */

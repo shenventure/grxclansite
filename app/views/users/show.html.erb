@@ -1,12 +1,24 @@
-<%= @user.gamertag %>
 
-<%= @user.email %>
+<h1><%= @user.gamertag %></h1>
 
-<%= @user.role %>
+  <div class="left-profile"><%=image_tag("adrienneOTRtour.JPG", size: "200x150", alt: "Adrienne Shen")%>
+  <h4><%= @user.role %></h4></div>
 
-<%= @user.occupation %>
+    <div class="profile-facts">
+      <ul>
+      	<li><%= @user.name %></li>
+      	<li><%= @user.occupation %></li>
+      	<li><%= @user.fave_game %></li>
+      	<li><%= @user.game_addiction %></li>
+      	<li><%= @user.fave_character %></li>
+      	<li><%= @user.first_fps %></li>
+      	<li><%= @user.fave_movie %></li>
+      	<li><%= @user.hobbies %></li>
+      	<li><%= @user.fact %></li>
+      	<li><%= @user.twitter %></li>
+        <li><%=link_to "Edit profile", edit_user_path %></li>
+      </ul>
+    </div>   
 
-<%= @user.fave_game %>
 
-<%= @user.game_addiction %>
 

@@ -11,7 +11,7 @@
   </li>
   <li>
     <div><%=image_tag("adrienneOTRtour.JPG", size: "113x50", alt: "Adrienne Shen")%></div>
-    <h3>Orchidstra</h3> 
+    <h3><%= link_to "Orchidstra", controller: "users", action: "show", id: current_user %></h3> 
     <h4>Adrienne Shen</h4>
     <h5>Role: Team Captain</h5>  
     <a href="https://twitter.com/ShenVenture" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @ShenVenture</a>
