@@ -1,29 +1,63 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2>Update Profile</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+  <div><%= f.label :email %>
+  <%= f.email_field :email, autofocus: true %></div><br />
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
   <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+    <%= f.password_field :password, autocomplete: "off" %></div> </br>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+  <div><%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, autocomplete: "off" %></div></br>
 
+  <div><%= f.label :Gamertag %>
+      <%= f.text_field :gamertag %></div></br>
+
+  <div><%= f.label :Real_Name %>
+      <%= f.text_field :name %></div><br />
+
+  <div><%= f.label :Clan_Role %>
+      <%= f.text_field :role %></div><br />
+
+  <div><%= f.label :Real_Life_occupation %>
+      <%= f.text_field :occupation %></div></br>
+
+  <div><%= f.label :Favorite_game %>
+      <%= f.text_field :fave_game%></div></br> 
+
+  <div><%= f.label :First_game_addiction %>
+      <%= f.text_field :game_addiction %></div></br>
+
+  <div><%= f.label :Favorite_video_game_character %>
+      <%= f.text_field :fave_character %></div></br>
+
+  <div><%= f.label :First_FPS_game_played %>
+      <%= f.text_field :first_fps %></div></br>
+
+  <div><%= f.label :Favorite_movie %>
+      <%= f.text_field :fave_movie %></div></br>
+
+  <div><%= f.label :Hobbies_and_interests%>
+      <%= f.text_area :hobbies %></div></br>
+
+  <div><%= f.label :Something_not_many_people_know_about_me %>
+      <%= f.text_area :fact %></div></br>
+
+  <div><%= f.label :Twitter %>
+      <%= f.text_field :twitter %><div></br>
+  
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %></div>
+    <%= f.password_field :current_password, autocomplete: "off" %></div></br>    
 
-  <div><%= f.submit "Update" %></div>
+  <div><%= f.submit "Update", :class => 'btn btn-success' %><%= link_to "Back", :back, :class => 'back' %></div>
+
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>

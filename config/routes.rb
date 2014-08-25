@@ -1,5 +1,6 @@
 Grxclan::Application.routes.draw do
-  devise_for :users
+  get "registrations/account_update_params"
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
   get "videos/index"
   get "videos/show"
@@ -19,7 +20,9 @@ Grxclan::Application.routes.draw do
   match '/roster', to: 'static_pages#roster',   via: 'get'
   match '/video', to: 'static_pages#video',     via: 'get'
 
-  get 'users/:id' => 'users#show'
+  match '/users/:id(.:format)', to: 'users#show',   via: 'get'
+  match '/users/:id', to: 'users#create',   via: 'post'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

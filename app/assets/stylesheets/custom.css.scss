@@ -53,9 +53,22 @@ li {
 	text-align: center;
 }
 
-.profile-facts ul {
-	float: left;
-	font-size: 20px;
+.profile-facts {
+	clear: both;
+	font-size: 18px;
+	font-style: italic;
+	padding-top: 30px;
+	text-align: center;
+}
+
+.fontmonkey {
+	font-family: 'FunkyMonkey';
+	font-size: 25px;
+}
+
+.back {
+	font-size: 16px;
+	margin-left: 35px;
 }
 
 /* Voting */

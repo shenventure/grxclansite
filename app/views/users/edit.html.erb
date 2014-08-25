@@ -30,15 +30,15 @@
       <%= profile.text_field :fave_movie %>
 
       <%= profile.label :Hobbies_and_interests%>
-      <%= profile.text_field :hobbies %>
+      <%= profile.text_area :hobbies %>
 
       <%= profile.label :Something_not_many_people_know_about_me %>
-      <%= profile.text_field :fact %>
+      <%= profile.text_area :fact %>
 
       <%= profile.label :Twitter %>
       <%= profile.text_field :twitter %> </br>   
 
-      <%= profile.submit "Update profile", class: "btn btn-large btn-primary" %>
+      <%= submit_tag "Update profile", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
 </div> 

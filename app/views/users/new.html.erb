@@ -5,42 +5,41 @@
       <%= profile.label :Gamertag %>
       <%= profile.text_field :gamertag %>
 
-      <%= profile.label :Real_Name %>
-      <%= profile.text_field :name %>
+        <%= profile.label :Real_Name %>
+        <%= profile.text_field :name %>
 
-      <%= profile.label :Clan_Role %>
-      <%= profile.text_field :role %>
+        <%= profile.label :Clan_Role %>
+        <%= profile.text_field :role %>
 
-      <%= profile.label :Real_Life_occupation %>
-      <%= profile.text_field :occupation %>   
+        <%= profile.label :Real_Life_occupation %>
+        <%= profile.text_field :occupation %>   
 
-        <%= profile_form.label :Favorite_game %>
-        <%= profile_form.text_field :fave_game%>  
+        <%= profile.label :Favorite_game %>
+        <%= profile.text_field :fave_game%>  
 
-        <%= profile_form.label :First_game_addiction %>
-        <%= profile_form.text_field :game_addiction %>  
+        <%= profile.label :First_game_addiction %>
+        <%= profile.text_field :game_addiction %>  
 
-        <%= profile_form.label :Favorite_video_game_character %>
-        <%= profile_form.text_field :fave_character %>  
+        <%= profile.label :Favorite_video_game_character %>
+        <%= profile.text_field :fave_character %>  
 
-        <%= profile_form.label :First_FPS_game_played %>
-        <%= profile_form.text_field :first_fps %>   
+        <%= profile.label :First_FPS_game_played %>
+        <%= profile.text_field :first_fps %>   
 
-        <%= profile_form.label :Favorite_movie %>
-        <%= profile_form.text_field :fave_movie %>
+        <%= profile.label :Favorite_movie %>
+        <%= profile.text_field :fave_movie %>
 
-        <%= profile_form.label :Hobbies_and_interests%>
-        <%= profile_form.text_field :hobbies %>
+        <%= profile.label :Hobbies_and_interests%>
+        <%= profile.text_area :hobbies %>
 
-        <%= profile_form.label :Something_not_many_people_know_about_me %>
-        <%= profile_form.text_field :fact %>
+        <%= profile.label :Something_not_many_people_know_about_me %>
+        <%= profile.text_area :fact %>
 
-        <%= profile_form.label :Twitter %>
-        <%= profile_form.text_field :twitter %> </br>   
+        <%= profile.label :Twitter %>
+        <%= profile.text_field :twitter %> </br>   
 
 
-        <%= profile_form.submit "Create my profile", class: "btn btn-large btn-primary" %>
+        <%= profile.submit "Create my profile", class: "btn btn-large btn-primary" %>
       <% end %>
-    <% end %>  
   </div>
-</div>  
+</div>   
