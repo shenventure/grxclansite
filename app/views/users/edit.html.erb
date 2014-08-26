@@ -36,7 +36,13 @@
       <%= profile.text_area :fact %>
 
       <%= profile.label :Twitter %>
-      <%= profile.text_field :twitter %> </br>   
+      <%= profile.text_field :twitter %>
+
+      <%= profile.label :YouTube %>
+      <%= profile.text_field :youtube %>
+
+      <%= profile.label :Twitch.TV %>
+      <%= profile.text_field :twitch %> </br>         
 
       <%= submit_tag "Update profile", class: "btn btn-large btn-primary" %>
     <% end %>

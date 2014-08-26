@@ -12,6 +12,10 @@ li {
 	margin-bottom: 90px;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 /* Nav Bar Links */
 
 .navlinks {
@@ -48,15 +52,37 @@ li {
 	text-align: center;
 }
 
+.social {
+	margin-top: 40px;
+}
+
+.social span {
+	padding: 5px;
+}
+
+.twitch {
+	margin-top: 15px;
+}
+
 /* Individual Profiles */
 
 .left-profile {
 	float: left;
+	text-decoration: none;
+}
+
+.left-profile a {
+	color: #30B542;
+}
+
+.left-profile a:hover {
+	color: #6DC639;		
 }
 
 .left-profile-details {
 	float: left;
 	margin-top: 80px;
+	text-decoration: none;
 }
 
 #center {
