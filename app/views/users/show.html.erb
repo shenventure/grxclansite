@@ -1,14 +1,25 @@
 
-<div class="left-profile">
+<div class="left-profile" id="center">
   <h1><%= @user.gamertag %></h1>
   <%=image_tag("adrienneOTRtour.JPG", size: "200x150", alt: "Adrienne Shen")%>
   <h4><%= @user.role %></h4> 
   <% if current_user = @user %>
-    <%=link_to "Edit profile", edit_user_registration_path %>
-  <% end %>
-</div>  
-    <div class="profile-facts">
-      <ul>
+    <%=link_to "Edit profile", edit_user_registration_path, :id => "center" %>
+  <% end %>  
+</div>
+<ul class="left-profile">
+
+  <li><%= link_to 'https://www.youtube.com/user/orchidstra' do %> 
+    <%= image_tag("YouTube-icon-full_color.png", size: "70x80", alt: "YouTube") %>
+    <% end %></li>
+  <li><%= link_to 'http://www.twitch.tv/grx_orchidstra' do %> 
+    <%=image_tag("GlitchIcon_purple.png", size: "80x80", alt: "Twitch") %>
+    <% end %></li>
+</ul>
+      <section id="tweets">
+  <a class="twitter-timeline" width="250" height="350" data-dnt="true" href="https://twitter.com/ShenVenture" data-widget-id="504028506846535681">Tweets by @ShenVenture</a>
+</section>
+      <ul class="profile-facts">
       	<li><span class="fontmonkey">Name: </span><%= @user.name %></li>
       	<li><span class="fontmonkey">Real-Life Occupation: </span><%= @user.occupation %></li>
       	<li><span class="fontmonkey">Favorite Video Game: </span><%= @user.fave_game %></li>
@@ -18,9 +29,12 @@
       	<li><span class="fontmonkey">Favorite Movie: </span><%= @user.fave_movie %></li>
       	<li><span class="fontmonkey">Hobbies & Interests: </span><%= @user.hobbies %></li>
       	<li><span class="fontmonkey">Something Not Many People Know About Me: </span><%= @user.fact %></li>
-      	<li><span class="fontmonkey">Twitter: </span><%= @user.twitter %></li>
-      </ul>
-    </div>   
+      </ul>   
+
+      <script>
+document.addEventListener('DOMContentLoaded', function() {
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");}, false);
+  </script> 
 
 
 

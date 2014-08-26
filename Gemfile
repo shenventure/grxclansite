@@ -10,6 +10,7 @@ gem "table_print"
 
 gem "youtube_it"
 gem 'acts_as_commentable'
+gem 'twitter'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.5'

@@ -50,15 +50,34 @@ li {
 
 .left-profile {
 	float: left;
+}
+
+.left-profile li {
+	float: left;
+	margin-top: 50px;
+	padding: 30px;
+}
+
+#center {
+	text-align: center;
+}
+
+#center h1, h4 {
 	text-align: center;
 }
 
 .profile-facts {
-	clear: both;
+	float: left;
 	font-size: 18px;
 	font-style: italic;
-	padding-top: 30px;
-	text-align: center;
+	margin-left: 0px;
+	margin-right: 400px;
+	padding-top: 20px;
+}
+
+#tweets {
+	float: right;
+	margin-top: 45px;
 }
 
 .fontmonkey {
