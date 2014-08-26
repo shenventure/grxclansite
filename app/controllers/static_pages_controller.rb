@@ -6,6 +6,7 @@ class StaticPagesController < ApplicationController
   end
 
   def roster
+    @users = User.all
   end
 
   def video

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140819230211) do
+ActiveRecord::Schema.define(version: 20140826221233) do
 
   create_table "profiles", force: true do |t|
     t.string   "name"
@@ -64,6 +64,8 @@ ActiveRecord::Schema.define(version: 20140819230211) do
     t.text     "hobbies"
     t.text     "fact"
     t.string   "twitter"
+    t.string   "youtube"
+    t.string   "twitch"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

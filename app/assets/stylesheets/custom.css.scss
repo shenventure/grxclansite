@@ -43,7 +43,9 @@ li {
 .roster-list li {
 	float: left;
 	list-style: none;
-	margin-right: 50px;
+	margin-top: 30px;
+	padding: 15px;
+	text-align: center;
 }
 
 /* Individual Profiles */
@@ -52,10 +54,9 @@ li {
 	float: left;
 }
 
-.left-profile li {
+.left-profile-details {
 	float: left;
-	margin-top: 50px;
-	padding: 30px;
+	margin-top: 80px;
 }
 
 #center {
