@@ -7,12 +7,12 @@
             <div class="left-profile">
               <h3><%= link_to "#{user.name}", user_path(user.id), method: :get %></h3>
               <%=link_to user_path(user.id) do %>
-                <%=image_tag("Randallwong.jpg", size: "250x150", alt: "Randall Wong")%>
+                <%=image_tag("Randallwong.jpg", size: "235x150", alt: "Randall Wong")%>
               <% end %>
             </div>
             <div class="left-profile-details">
-                <p><%= user.gamertag%></p>
-                <p><%= user.role %></p>
+                <p class="gamertag"><%= user.gamertag%></p>
+                <p class="role"><%= user.role %></p>
                 <div class="social">
                   <span><%= link_to "https://www.youtube.com/#{user.youtube}" do %> 
                     <%= image_tag("youtube64x64.png", size: "45x55", alt: "YouTube") %>
@@ -20,9 +20,9 @@
                   <span><%= link_to "https://twitter.com/#{user.twitter}" do %> 
                     <%= image_tag("twitter64x64.png", size: "45x55", alt: "Twitter") %>
                   <% end %> </span></br>               
-                  <%= link_to "http://www.twitch.tv/#{user.twitch}" do %> 
-                    <%=image_tag("GlitchIcon_purple.png", size: "45x55", alt: "Twitch", :class => "twitch") %>
-                    <%= user.twitch %>
+                  <div class="twitch"><%= link_to "http://www.twitch.tv/#{user.twitch}" do %> 
+                    <%=image_tag("GlitchIcon_purple.png", size: "45x55", alt: "Twitch") %>
+                    <span><%= user.twitch %></span></div>
                   <% end %>
                 </div>
             </div>
