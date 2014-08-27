@@ -22,6 +22,8 @@ module Grxclan
 
   config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
+  config.paperclip_defaults = {:storage => :fog, :fog_credentials => {:provider => "Local", :local_root => "#{Rails.root}/public"}, :fog_directory => "", :fog_host => "localhost"}
+
   client = Twitter::REST::Client.new do |config|
     config.consumer_key        = "YOUR_CONSUMER_KEY"
     config.consumer_secret     = "YOUR_CONSUMER_SECRET"

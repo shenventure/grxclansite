@@ -31,7 +31,11 @@ class UsersController < ApplicationController
 private
 
   def user_params
-    params.require(:user).permit(:gamertag, :name, :email, :role, :occupation, :fave_game, :game_addiction, :fave_character, :first_fps, :fave_movie, :hobbies, :fact, :twitter, :youtube, :twitch)
+    params.require(:user).permit(:gamertag, :name, :email, :role, :occupation, :fave_game, 
+                                 :game_addiction, :fave_character, :first_fps, :fave_movie, 
+                                 :hobbies, :fact, :twitter, :youtube, :twitch, :avatar,
+                                 :avatar_file_name, :avatar_file_size, :avatar_content_type, 
+                                 :avatar_updated_at)
   end
 
   def current_user=(user)

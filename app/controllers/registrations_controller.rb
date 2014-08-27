@@ -4,6 +4,7 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(:email, :password, :password_confirmation, :current_password, 
                                  :gamertag, :name, :role, :occupation, :fave_game, :game_addiction, 
                                  :fave_character, :first_fps, :fave_movie, :hobbies, :fact, :twitter, 
-                                 :youtube, :twitch)    
+                                 :youtube, :twitch, :avatar, :avatar_file_name, :avatar_file_size,
+                                 :avatar_content_type, :avatar_updated_at)    
   end
 end
