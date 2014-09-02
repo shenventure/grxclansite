@@ -53,7 +53,7 @@ a:hover {
 }
 
 .roster-list li:nth-child(even) {
-	margin-left: 25px;
+	float: right;
 }
 
 .social {
@@ -81,6 +81,7 @@ a:hover {
 
 .left-profile {
 	float: left;
+	font-style: italic;
 	text-decoration: none;
 }
 

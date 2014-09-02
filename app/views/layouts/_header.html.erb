@@ -10,10 +10,14 @@
           <li><%= link_to "VIDEO", video_path %></li>
           <li><%= link_to "GALLERY", "#" %></li>
           <% if signed_in? %>
-            <li><%= link_to "Sign out", destroy_user_session_path, method: 'delete', id: 'signup' %></li>
+            <li><%= link_to "Sign out", destroy_user_session_path, method: 'delete', id: 'signup' %>
+              <%=link_to "Edit profile", edit_user_registration_path %>
+            </li>
           <% else %>
-            <li><%= link_to "Sign In", user_session_path, :id => 'signup' %></li>
+            <li><%= link_to "Sign In", user_session_path, :id => 'signup' %>
+            </li>
           <% end %>  
+            
         </ul>
           
       </nav>

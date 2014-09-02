@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20140829224434_add_dimensions_to_users.rb

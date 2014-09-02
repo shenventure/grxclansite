@@ -6,14 +6,6 @@ class User < ActiveRecord::Base
 
   validates :gamertag, presence: true, length: { maximum: 20 }  
 
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
-  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
-
-  # validates_attachment :avatar,
-  #   :presence => true,
-  #   :size => { :in => 0..10.megabytes },
-  #   :content_type => { :content_type => /^image\/(jpeg|png|gif|tiff)$/ }   
-
   has_attached_file :avatar, 
     :path => ":rails_root/public/system/:attachment/:id/:basename_:style.:extension",
     :url => "/system/:attachment/:id/:basename_:style.:extension",
@@ -28,5 +20,27 @@ class User < ActiveRecord::Base
     :preview  => '-set colorspace sRGB -strip',
     :large    => '-set colorspace sRGB -strip',
     :retina   => '-set colorspace sRGB -strip -sharpen 0x0.5'
-  } 
-end
+  }
+
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
+
+#   before_save :extract_dimensions
+#   serialize :dimensions  
+
+#   def image?
+#     avatar_content_type =~ %r{^(image|(x-)?application)/(bmp|gif|jpeg|jpg|pjpeg|png|x-png)$}
+#   end
+ 
+
+# private
+
+#   def extract_dimensions
+#     return unless image?
+#       tempfile = avatar.queued_for_write[:original]
+#     unless tempfile.nil?
+#       geometry = Paperclip::Geometry.from_file(tempfile)
+#       self.dimensions = [geometry.width.to_i, geometry.height.to_i]
+#     end
+#   end
+end  

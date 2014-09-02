@@ -1,14 +1,8 @@
 
 <div class="left-profile" id="center">
   <h1><%= @user.gamertag %></h1>
-
-<%= image_tag(@user.avatar.url, size: "200x150", alt: "Profile Photo") %>
-
-  <%=image_tag("adrienneOTRtour.JPG", size: "200x150", alt: "Adrienne Shen")%>
-  <h4><%= @user.role %></h4> 
-  <% if current_user = @user %>
-    <%=link_to "Edit profile", edit_user_registration_path, :id => "center" %>
-  <% end %>  
+  <%= image_tag(@user.avatar.url, size: "200x150", alt: "#{@user.gamertag} Photo") %>
+  <h4><%= @user.role %></h4>  
 </div>
 <ul class="left-profile">
 
