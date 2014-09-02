@@ -4,9 +4,6 @@
   <title>Grxclan</title>
   <%= stylesheet_link_tag    "application", "dropit.css", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "dropit.js", "data-turbolinks-track" => true %>
-      <script type="text/javascript">$(document).ready(function() {
-    $('.menu').dropit();
-});</script>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %> 
 
@@ -19,5 +16,8 @@
     <p class="alert"><%= alert %></p>
     <%= yield %>
   </div>
+    <script type="text/javascript">$(document).ready(function() {
+      $('.menu').dropit();
+    });</script>
 </body>
 </html>

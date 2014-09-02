@@ -25,16 +25,17 @@ a:hover {
 	margin-top: 10px;
 	padding: 0px 10px;
 	}
+}	
 
-	li:last-child {
+#gamertag li {
 		border-right: none;
 	}
-}	
 
 #gamertag_dropdown {
 	font-size: 17px;
 	font-style: italic;
 	color: #6DC639;		
+	margin-right: none;
 }
 
 #gamertag_dropdown:hover {
