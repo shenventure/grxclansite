@@ -9,18 +9,35 @@
           <li><%= link_to "ROSTER", roster_path %></li>
           <li><%= link_to "VIDEO", video_path %></li>
           <li><%= link_to "GALLERY", "#" %></li>
+        </ul>
+        <ul class="nav pull-right menu">
           <% if signed_in? %>
-            <li><%= link_to "Sign out", destroy_user_session_path, method: 'delete', id: 'signup' %>
+            <li><%= link_to "#{current_user.gamertag}", users_path, :id => 'gamertag_dropdown' %></li> 
+            <ul>
+              <li><%= link_to "Sign out", destroy_user_session_path, method: 'delete', id: 'signup' %>
               <%=link_to "Edit profile", edit_user_registration_path %>
-            </li>
+              </li>
           <% else %>
-            <li><%= link_to "Sign In", user_session_path, :id => 'signup' %>
-            </li>
-          <% end %>  
-            
+              <li><%= link_to "Sign In", user_session_path, :id => 'signup' %></li>
+          <% end %>              
+            </ul>        
+            </li>                  
         </ul>
           
       </nav>
     </div>
   </div>
 </header>
+
+<ul class="menu">
+    <li>
+        <a href="#">Dropdown</a>
+        <ul>
+            <li><a href="#">Some Action 1</a></li>
+            <li><a href="#">Some Action 2</a></li>
+            <li><a href="#">Some Action 3</a></li>
+            <li><a href="#">Some Action 4</a></li>
+        </ul>
+    </li>
+</ul>
+
