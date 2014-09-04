@@ -1,37 +1,38 @@
 
+<div class="profile_background">
 <div class="left-profile" id="center">
   <h1><%= @user.gamertag %></h1>
-  <%= image_tag(@user.avatar.url, size: "200x150", alt: "#{@user.gamertag} Photo") %>
+    <%= image_tag(@user.avatar.url, size: "200x150", alt: "#{@user.gamertag} Photo", :class => "profile-pic") %>
   <h4><%= @user.role %></h4>  
+  <%= link_to 'https://www.youtube.com/user/orchidstra' do %> 
+    <%= image_tag("YouTube-icon-full_color.png", size: "50x60", alt: "YouTube") %>
+    <% end %>
+  <%= link_to 'http://www.twitch.tv/grx_orchidstra' do %> 
+    <%=image_tag("GlitchIcon_purple.png", size: "60x60", alt: "Twitch") %>
+    <% end %>  
 </div>
-<ul class="left-profile">
-
-  <li><%= link_to 'https://www.youtube.com/user/orchidstra' do %> 
-    <%= image_tag("YouTube-icon-full_color.png", size: "70x80", alt: "YouTube") %>
-    <% end %></li>
-  <li><%= link_to 'http://www.twitch.tv/grx_orchidstra' do %> 
-    <%=image_tag("GlitchIcon_purple.png", size: "80x80", alt: "Twitch") %>
-    <% end %></li>
-</ul>
-      <section id="tweets">
+<section class="youtube">
+  <iframe width="560" height="315" src="//www.youtube.com/embed/<%=@user.featured_vid%>" frameborder="0" allowfullscreen></iframe>
+</section>
+<section>
+      <ul class="profile-facts">
+        <li><b>Name:  </b><%= @user.name %></li>
+        <li><b>Real-Life Occupation: </b><%= @user.occupation %></li>
+        <li><b>Favorite Video Game: </b><%= @user.fave_game %></li>
+        <li><b>First Gaming Addiction: </b><%= @user.game_addiction %></li>
+        <li><b>Favorite Video Game Character: </b><%= @user.fave_character %></li>
+        <li><b>First FPS Game Played: </b><%= @user.first_fps %></li>
+        <li><b>Favorite Movie: </b><%= @user.fave_movie %></li>
+        <li><b>Hobbies & Interests: </b><%= @user.hobbies %></li>
+        <li><b>Something Not Many People Know About Me: </b><%= @user.fact %></li>
+      </ul>   
+</section>
+<section id="tweets">
   <a class="twitter-timeline" width="250" height="350" data-dnt="true" href="https://twitter.com/ShenVenture" data-widget-id="504028506846535681">Tweets by @ShenVenture</a>
 </section>
-      <ul class="profile-facts">
-      	<li><span class="fontmonkey">Name: </span><%= @user.name %></li>
-      	<li><span class="fontmonkey">Real-Life Occupation: </span><%= @user.occupation %></li>
-      	<li><span class="fontmonkey">Favorite Video Game: </span><%= @user.fave_game %></li>
-      	<li><span class="fontmonkey">First Gaming Addiction: </span><%= @user.game_addiction %></li>
-      	<li><span class="fontmonkey">Favorite Video Game Character: </span><%= @user.fave_character %></li>
-      	<li><span class="fontmonkey">First FPS Game Played: </span><%= @user.first_fps %></li>
-      	<li><span class="fontmonkey">Favorite Movie: </span><%= @user.fave_movie %></li>
-      	<li><span class="fontmonkey">Hobbies & Interests: </span><%= @user.hobbies %></li>
-      	<li><span class="fontmonkey">Something Not Many People Know About Me: </span><%= @user.fact %></li>
-      </ul>   
+</div>
 
-      <script>
-document.addEventListener('DOMContentLoaded', function() {
-      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");}, false);
-  </script> 
+
 
 
 

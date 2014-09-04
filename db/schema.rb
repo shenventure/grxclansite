@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140829224434) do
+ActiveRecord::Schema.define(version: 20140904220724) do
 
   create_table "profiles", force: true do |t|
     t.string   "name"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20140829224434) do
     t.string   "avatar_content_type"
     t.datetime "avatar_updated_at"
     t.string   "dimensions"
+    t.text     "featured_vid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

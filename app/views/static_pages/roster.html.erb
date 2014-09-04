@@ -7,7 +7,7 @@
             <div class="left-profile">
               <h3><%= link_to "#{user.name}", user_path(user.id), method: :get %></h3>
               <%=link_to user_path(user.id) do %>
-                <%= image_tag(user.avatar.url, size: "200x150", alt: "#{user.gamertag}'s Profile") %>
+                <%= image_tag(user.avatar.url, size: "200x150", alt: "#{user.gamertag}'s Profile", :class => "profile-pic") %>
               <% end %>
             </div>
             <div class="left-profile-details">
