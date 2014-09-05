@@ -7,4 +7,10 @@ class RegistrationsController < Devise::RegistrationsController
                                  :youtube, :twitch, :avatar, :avatar_file_name, :avatar_file_size,
                                  :avatar_content_type, :avatar_updated_at, :featured_vid)    
   end
+
+protected
+
+  def after_update_path_for(resource)
+    user_path(resource)
+  end   
 end

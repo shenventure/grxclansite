@@ -62,10 +62,12 @@ a:hover {
 }
 
 .roster-list li {
+/*	border: solid 2px black;*/
 	float: left;
+	height: 300px;
+	width: 400px;
 	list-style: none;
-	margin-top: 10px;
-	padding: 20px;
+	padding: 10px;
 	text-align: center;
 }
 
@@ -74,7 +76,7 @@ a:hover {
 }
 
 .social {
-	margin-top: 35px;
+	margin-top: 25px;
 	text-align: left;
 }
 
@@ -83,7 +85,7 @@ a:hover {
 }
 
 .twitch {
-	border: solid 1px;
+
 	color: #643DA7;
 	margin-top: 18px;
 	padding: 2px;
@@ -100,6 +102,21 @@ a:hover {
 	background-image: url('/assets/greenwave.png');
 	background-position: center;
 }
+
+.profile-right-border {
+	border-right: solid 3px black;
+	border-color: #C3C9CB;
+	margin-top: 20px;
+	padding-right: 80px;
+}
+
+.social-profile {
+	margin: 15px 0px 0px 22px;
+	img {
+		margin-left: 8px;
+	}
+}
+
 
 .left-profile {
 	float: left;
@@ -118,7 +135,7 @@ a:hover {
 .left-profile-details {
 	float: left;
 	margin-left: 20px;	
-	margin-top: 80px;
+	margin-top: 70px;
 	text-decoration: none;
 }
 
@@ -131,10 +148,6 @@ a:hover {
 .role {
 	font-size: 18px;
 	text-align: left;
-}
-
-#center {
-	text-align: center;
 }
 
 #center h1, h4 {
@@ -150,12 +163,13 @@ a:hover {
   /* Firefox 1-3.6 */
   -moz-border-radius: 12px; 
 	border-radius: 15px;
+	box-shadow: 10px 10px 5px #888888;
 	float: left;
 	font-size: 18px;
 	font-style: italic;
 	margin-top: 20px;
 	margin-left: 0px;
-	margin-right: 300px;
+	width: 95%;
 	padding: 20px;
 }
 

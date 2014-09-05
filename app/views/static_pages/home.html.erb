@@ -2,6 +2,13 @@
           <% if signed_in? %>
             <p>Welcome <%=current_user.gamertag%>!</p>
           <% end %> 	
+    <section id="tweets">
+<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/grxclan" data-widget-id="">Tweets by @grxclan</a>
+<script>
+  $( document ).ready(function() {
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");});
+</script>
+    </section>      
     <h1>GRX Clan</h1>
     <h2>Gamers Redefining Excellence</h2>
     <h3>Gears of War 3 Matches: 1v1</h3>
@@ -11,7 +18,7 @@
     <p>Don't miss it!</p>
     <h3>Place your bets here:</h3>
 <form accept-charset="UTF-8" action="/home/index" method="post">
-  <div style="margin:0;padding:0">
+  <div style="margin:0;     padding:0">
     <input name="utf8" type="hidden" value="&#x2713;" />
     <input name="authenticity_token" type="hidden" value="f755bb0ed134b76c432144748a6d4b7a7ddf2b71" />
   </div>
@@ -31,7 +38,5 @@
       </li>
     </ul>
 </form>
-
-
 </div>
 

@@ -1,15 +1,22 @@
 
 <div class="profile_background">
 <div class="left-profile" id="center">
-  <h1><%= @user.gamertag %></h1>
-    <%= image_tag(@user.avatar.url, size: "200x150", alt: "#{@user.gamertag} Photo", :class => "profile-pic") %>
-  <h4><%= @user.role %></h4>  
-  <%= link_to 'https://www.youtube.com/user/orchidstra' do %> 
-    <%= image_tag("YouTube-icon-full_color.png", size: "50x60", alt: "YouTube") %>
+  <div class="profile-right-border">
+    <h1><%= @user.gamertag %></h1>
+      <%= image_tag(@user.avatar.url, size: "200x150", alt: "#{@user.gamertag} Photo", :class => "profile-pic") %>
+    <h4><%= @user.role %></h4>  
+  </div> 
+  <div class="social-profile">
+    <%= link_to "https://www.twitter.com/#{@user.twitter}" do %> 
+      <%= image_tag("twitter64x64.png", size: "40x50", alt: "Twitter") %>
     <% end %>
-  <%= link_to 'http://www.twitch.tv/grx_orchidstra' do %> 
-    <%=image_tag("GlitchIcon_purple.png", size: "60x60", alt: "Twitch") %>
-    <% end %>  
+    <%= link_to "https://www.youtube.com/#{@user.youtube}" do %> 
+      <%= image_tag("youtube64x64.png", size: "40x50", alt: "YouTube") %>
+    <% end %>
+    <%= link_to "http://www.twitch.tv/#{@user.twitch}" do %> 
+      <%=image_tag("GlitchIcon_purple.png", size: "50x50", alt: "Twitch") %>
+    <% end %> 
+  </div>
 </div>
 <section class="youtube">
   <iframe width="560" height="315" src="//www.youtube.com/embed/<%=@user.featured_vid%>" frameborder="0" allowfullscreen></iframe>
@@ -26,9 +33,6 @@
         <li><b>Hobbies & Interests: </b><%= @user.hobbies %></li>
         <li><b>Something Not Many People Know About Me: </b><%= @user.fact %></li>
       </ul>   
-</section>
-<section id="tweets">
-  <a class="twitter-timeline" width="250" height="350" data-dnt="true" href="https://twitter.com/ShenVenture" data-widget-id="504028506846535681">Tweets by @ShenVenture</a>
 </section>
 </div>
 

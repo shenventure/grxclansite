@@ -55,7 +55,7 @@
   <div><%= f.label :Something_not_many_people_know_about_me %>
       <%= f.text_area :fact %></div></br>
 
-  <div><%= f.label :Twitter %>
+  <div><%= f.label :Twitter %> <i>(Do not include @ sign)</i></br>
       <%= f.text_field :twitter %><div></br>
 
   <div><%= f.label :YouTube %>
@@ -64,7 +64,7 @@
   <div><%= f.label :TwitchTV %>
       <%= f.text_field :twitch %><div></br>
   
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+  <div><%= f.label :current_password %> <i>(Please enter your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %></div></br>    
 
   <div><%= f.submit "Update", :class => 'btn btn-success' %><%= link_to "Back", :back, :class => 'back' %></div>
