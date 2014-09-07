@@ -181,6 +181,12 @@ a:hover {
 #tweets {
 	clear: both;
 	float: right;
+	h1 {
+	vertical-align: bottom;
+	}
+	img {
+		height: 70px;
+	}
 }
 
 .fontmonkey {
